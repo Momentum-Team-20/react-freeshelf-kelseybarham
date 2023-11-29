@@ -1,4 +1,16 @@
 
 body {
     background-color: lightgrey;
+    display: flex;
+}
+
+.bookPage {
+    color: darkslategray;
+
+}
+
+
+.coverImage {
+    max-width: 150px;
+    display: flex;
 }

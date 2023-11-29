@@ -3,6 +3,7 @@ import bookData from './book-data.json'
 import { useState } from 'react'
 
 function App() {
+  
   return (
     <div>
       <h1>Freeshelf</h1>
@@ -28,6 +29,15 @@ function Book(props) {
   const [expanded, setExpanded] = useState(false)
   const handleClick = () => {
     setExpanded(!expanded)
+ 
+
+
+  }
+
+  const placeholderImage = "images/dummy_400x600_ffffff_cccccc_no-cover-photo.png";
+
+  const addDefaultSrc = (ev) => {
+    ev.target.src = placeholderImage
   }
 
   return (
@@ -35,7 +45,8 @@ function Book(props) {
       <h2>{props.title}</h2>
       <h3>{props.author}</h3>
       <h3>{props.shortDescription}</h3>
-      <img src={props.image} alt="book cover" className="coverImage" />
+      <img src={props.image ? props.image : placeholderImage} alt="book cover" className="coverImage" onError={addDefaultSrc}/>
+
       <button onClick={handleClick}>
         {expanded ? 'show less' : 'show more'}
       </button>
