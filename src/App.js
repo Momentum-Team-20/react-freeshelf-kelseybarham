@@ -52,10 +52,10 @@ function Book(props) {
       </button>
       {expanded && ( 
         <div className="showMoreBookDetails">
-          <h6>{props.url}</h6>
-          <h6>{props.publisher}</h6>
-          <h6>{props.publicationDate}</h6>
-          <h6>{props.detailedDescription}</h6>
+          <p><strong>URL:</strong> {props.url}</p>
+          <p><strong>Publisher:</strong> {props.publisher}</p>
+          <p><strong>Publication date:</strong> {props.publicationDate}</p>
+          <p><strong>Full description:</strong> {props.detailedDescription}</p>
         </div>
       )}
     </div>
