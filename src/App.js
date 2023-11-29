@@ -36,6 +36,8 @@ function Book(props) {
 
   const placeholderImage = "images/dummy_400x600_ffffff_cccccc_no-cover-photo.png";
 
+  const placeholderStatement = "Not provided"
+
   const addDefaultSrc = (ev) => {
     ev.target.src = placeholderImage
   }
@@ -53,8 +55,8 @@ function Book(props) {
       {expanded && ( 
         <div className="showMoreBookDetails">
           <p><strong>URL:</strong> {props.url}</p>
-          <p><strong>Publisher:</strong> {props.publisher}</p>
-          <p><strong>Publication date:</strong> {props.publicationDate}</p>
+          <p><strong>Publisher:</strong> {props.publisher ? props.publisher : placeholderStatement}</p>
+          <p><strong>Publication date:</strong> {props.publicationDate ? props.publicationDate : placeholderStatement}</p>
           <p><strong>Full description:</strong> {props.detailedDescription}</p>
         </div>
       )}
