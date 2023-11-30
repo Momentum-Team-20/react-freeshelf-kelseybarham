@@ -6,7 +6,6 @@ function App() {
   
   return (
     <div>
-      <h1>Freeshelf</h1>
       <div className="book-details">
       {bookData.map((book)=> (
         <Book

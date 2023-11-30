@@ -1,12 +1,12 @@
 
 body {
     background-color: lightgrey;
-    display: flex;
 }
 
 .bookPage {
     color: darkslategray;
-
+    display: flex;
+    flex-direction: column;
 }
 
 
